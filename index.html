@@ -1,26 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kanban</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div class="board">
-      <div class="column" data-column="Todo">
-        <h2>Todo</h2>
-        <div class="card" draggable="true">Task 1</div>
-      </div>
-      <div class="column" data-column="In Progress">
-        <h2>In Progress</h2>
-      </div>
-      <div class="column" data-column="Review">
-        <h2>Review</h2>
-      </div>
-      <div class="column" data-column="Done">
-        <h2>Done</h2>
-      </div>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Kanban Board with Rules</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Kanban Board</h1>
+
+  <div class="task-input">
+    <input type="text" id="taskText" placeholder="Enter task...">
+    <label>
+      <input type="checkbox" id="hasChecklist">
+      Has checklist
+    </label>
+    <button id="addTaskBtn">Add Task</button>
+  </div>
+
+  <div class="board">
+    <div class="column" data-column="Todo">
+      <h3>Todo</h3>
     </div>
-  </body>
+    <div class="column" data-column="In Progress">
+      <h3>In Progress</h3>
+    </div>
+    <div class="column" data-column="Review">
+      <h3>Review</h3>
+    </div>
+    <div class="column" data-column="Done">
+      <h3>Done</h3>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
 </html>
