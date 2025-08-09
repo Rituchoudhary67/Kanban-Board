@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.board {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.column {
+    /* border: 2px solid red; */
+    padding: 10px;
+    background-color: white;
+    width: 200px;
+    min-height: 300px;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    cursor: grab;
+}
+
+.card:active {
+    cursor: grabbing;
+}
+.column-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.column-header input {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.column-header button {
+    margin-top: 5px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;       
+    border-radius: 4px;
+    cursor: pointer;
+}
+.column-header button:hover {
+    background-color: #0056b3;
+}
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-header h3 {
+    margin: 0;
+    font-size: 16px;
+}
+.card-header button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.card-header button:hover {
+    color: red;
+}
+.card-content {
+    margin-top: 5px;
+}
+.card-content p {
+    margin: 0;
+    font-size: 14px;
+}
+.card-content textarea {
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+}
+.card-content textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+.card-content button {
+    margin-top: 5px;
+    padding: 5px 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.card-content button:hover {
+    background-color: #218838;
+}
+.column-header input:focus,
+.column-header button:focus,
+.card-content textarea:focus,
+.card-content button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.column-header input:focus {
+    border-color: #007bff;
+}
+.column-header button:focus {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.card-content textarea:focus {
+    border-color: #007bff;
+}
+.card-content button:focus {
+    box-shadow: 0 0 5px rgba(40, 167, 39, 0.5);
+}
+.column-header input::placeholder,
+.card-content textarea::placeholder {
+    color: #999;
+    font-style: italic;
+}
+.column-header input:disabled,
+.card-content textarea:disabled {
+    background-color: #f0f0f0;
+    color: #ccc;
+    cursor: not-allowed;
+}
+.column-header input:disabled::placeholder,
+.card-content textarea:disabled::placeholder {
+    color: #ccc;
+    font-style: normal;
+}
+.column-header button:disabled,
+.card-content button:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+.column-header button:disabled:hover,
+.card-content button:disabled:hover {
+    background-color: #ccc;
+    color: #666;
+    box-shadow: none;
+}
+.column-header button:disabled:focus,
+.card-content button:disabled:focus {
+    box-shadow: none;
+    outline: none;
+}
+.column-header input:focus-visible,
+.card-content textarea:focus-visible {
+    outline: 2px solid #007bff;
+}   
